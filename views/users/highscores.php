@@ -16,7 +16,7 @@
         <?php foreach($model as $record): ?>
           <tr>
             <td><?=$k?></td>
-            <td><?=$record['user']?></td>
+            <td><?=$record['username']?></td>
             <td><?=$record['points']?></td>
             <td><?=date('d-m-Y H:i:s', $record['timestamp'])?></td>
           </tr>

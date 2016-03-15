@@ -16,12 +16,12 @@ class Highscores extends ActiveRecord{
     {
         return [
             'id' => 'ID',
-            'user_id' => 'Username',
+            'username' => 'Username',
             'points' =>'Points',
             'timestamp' => 'Date of score'
 
         ];
     }
-  
+
 
 }

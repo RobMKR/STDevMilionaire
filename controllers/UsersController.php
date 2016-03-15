@@ -27,7 +27,7 @@ class UsersController extends Controller
         }
           if($model->save()){
             Yii::$app->session->setFlash('successReg', 'You have successfully registered. You can log in using your Username & Password.');
-          
+
           } else {
             Yii::$app->session->setFlash('unique', 'This username is token.');
             return $this->refresh();
@@ -72,7 +72,7 @@ class UsersController extends Controller
         return $this->redirect('/');
       }
       $model = new Highscores();
-      $model->user = Yii::$app->session['isLoggedIn'];
+      $model->username = Yii::$app->session['isLoggedIn'];
       $model->points = Yii::$app->session['score'];
       $model->timestamp = time();
       $model->save();
